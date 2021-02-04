@@ -1,3 +1,21 @@
+package {
+    default_applicable_licenses: ["external_libvterm_license"],
+}
+
+license {
+    name: "external_libvterm_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        // src/unicode.c:
+        "SPDX-license-identifier-0BSD",
+        // Everything else:
+        "SPDX-license-identifier-MIT",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
 cc_library_static {
     name: "libvterm",
 
